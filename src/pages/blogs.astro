@@ -1,0 +1,33 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const allBlogs = await Astro.glob("./blogs/*.md");
+
+const blogData = allBlogs.map((blog) => {
+  const { title, pubDate, slug } = blog.frontmatter;
+
+  return {
+    title: title || "No Title",
+    pubDate: pubDate || "No Date",
+    slug: slug,
+  };
+});
+
+blogData.sort(
+  (a, b) => new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime()
+);
+---
+
+<Layout title="snwzd blogs">
+  <h2>Blogs</h2>
+  <ul>
+    {blogData.map(({ title, pubDate, slug }) => (
+      <li class="flex justify-between items-center">
+        <a href={`/blogs/${slug}`} class="hover:text-cyan-200">
+          {title}
+        </a>
+        <p>{pubDate}</p>
+      </li>
+    ))}
+  </ul>
+</Layout>
