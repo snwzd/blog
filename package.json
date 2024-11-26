@@ -15,8 +15,5 @@
     "astro": "^4.16.13",
     "tailwindcss": "^3.4.15",
     "typescript": "^5.7.2"
-  },
-  "devDependencies": {
-    "tailwind-scrollbar": "^3.1.0"
   }
 }

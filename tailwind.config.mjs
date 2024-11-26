@@ -5,14 +5,13 @@ const plugin = require('tailwindcss/plugin')
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
-        extend: {
-            fontFamily: {
-                "geist": ['Geist', 'sans-serif']
-            }
-        },
-    },
+		extend: {
+			fontFamily: {
+				"geist": ['Geist', 'sans-serif']
+			}
+		},
+	},
 	plugins: [
-		require('tailwind-scrollbar'),
 		plugin(function ({ addBase, config }) {
 			addBase({
 				'h1': {
@@ -45,6 +44,6 @@ export default {
 					borderRadius: config('theme.borderRadius.lg'),
 				},
 			})
-		})
+		}),
 	],
 }

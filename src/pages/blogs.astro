@@ -22,7 +22,7 @@ blogData.sort(
   <h2>Blogs</h2>
   <ul>
     {blogData.map(({ title, pubDate, slug }) => (
-      <li class="flex justify-between items-center">
+      <li class="flex justify-between items-start">
         <a href={`/blogs/${slug}`} class="w-2/3 hover:text-teal-200">
           {title}
         </a>

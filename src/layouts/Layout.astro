@@ -12,7 +12,7 @@ const { title } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="description" content="snwzd website" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,15 +23,13 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
 
-  <body
-    class="flex justify-center bg-teal-900 text-white scrollbar-thin scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-thumb-teal-600 scrollbar-track-teal-300"
-  >
+  <body class="flex justify-center bg-teal-900 text-white">
     <div class="flex h-screen w-full lg:w-2/5 flex-col">
       <header
         class="flex-none border-b-2 border-dashed border-teal-800 py-2 px-4 bg-teal-900"
       >
         <div class="flex items-center justify-between">
-          <a href="/" class="font-bold">SNWZD</a>
+          <a href="/" class="font-semibold">SNWZD</a>
           <div class="inline-flex">
             <a
               href="/blogs"
@@ -54,22 +52,21 @@ const { title } = Astro.props;
       <footer
         class="flex-none border-t-2 border-dashed border-teal-800 py-4 px-4"
       >
-        <div class="flex items-center justify-center">
-          <a
-            href="https://github.com/snwzd"
-            class="py-2 px-2 hover:text-teal-200">GitHub</a
+        <div class="flex items-center justify-evenly">
+          <a href="https://github.com/snwzd" class="py-2 hover:text-teal-200"
+            >GitHub</a
           >
           <a
             href="https://www.linkedin.com/in/mprasadme"
-            class="py-2 px-2 hover:text-teal-200">LinkedIn</a
+            class="py-2 hover:text-teal-200">LinkedIn</a
           >
           <a
             href="https://twitter.com/sloflayer"
-            class="py-2 px-2 hover:text-teal-200">X (Twitter)</a
+            class="py-2 hover:text-teal-200">X (Twitter)</a
           >
           <a
             href="https://bsky.app/profile/snwzd.bsky.social"
-            class="py-2 px-2 hover:text-teal-200">Bluesky</a
+            class="py-2 hover:text-teal-200">Bluesky</a
           >
         </div>
       </footer>
